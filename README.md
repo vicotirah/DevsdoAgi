@@ -3,6 +3,17 @@
 
 ## Aula 1 - Algoritmos e Fluxogramas (22/01)
 Atividade 1:
+
+```portugol
+Inicio
+  Escreva "Digite sua idade:"
+  Leia idade
+  Se idade >= 18 então
+    Escreva "Idade Suficiente"
+  Senão 
+    Escreva "Idade Insuficiente"
+```
+
 Atividade 2:
 Atividade 3:
 
