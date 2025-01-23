@@ -2,8 +2,7 @@
 
 
 ## Aula 1 - Algoritmos e Fluxogramas (22/01)
-Atividade 1:
-
+**Atividade 1:**
 ```portugol
 Inicio
   Escreva "Digite sua idade:"
@@ -12,10 +11,23 @@ Inicio
     Escreva "Idade Suficiente"
   Senão 
     Escreva "Idade Insuficiente"
+  FimSe
+Fim
 ```
-
-Atividade 2:
-Atividade 3:
+**Atividade 2:**
+```portugol
+Inicio
+  Escreva "Insira seu saldo"
+  Leia saldo
+  Se saldo>0 então
+    Real saldo_limite = saldo *0,2
+    Escreva "Seu limite é: ", saldo_limite
+  Senão
+    Escreva "Não há limite liberado"
+  FimSe
+Fim
+```
+**Atividade 3:**
 
 
 ## Aula 2 -  Algoritmos e Fluxogramas (23/01)
