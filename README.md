@@ -1,8 +1,7 @@
-# Devs do Agi 
+# Devs do Agi 🚀👩‍💻
 
-
-## Aula 1 - Algoritmos e Fluxogramas (22/01)
-**Atividade 1:**
+## Aula 1 - Algoritmos e Fluxogramas (22/01) 🧩
+**1) Crie um algoritmo em Portugol para verificar se um cliente tem idade suficiente para abrir uma conta bancária (idade mínima: 18 anos)**
 ```portugol
 Inicio
   Escreva "Digite sua idade:"
@@ -14,7 +13,7 @@ Inicio
   FimSe
 Fim
 ```
-**Atividade 2:**
+**2) Crie um algoritmo em Portugol para calcular e mostrar para o cliente o limite da conta, através do seu saldo. O limite de conta deverá ser 20% do seu saldo**
 ```portugol
 Inicio
   Escreva "Insira seu saldo"
@@ -27,11 +26,23 @@ Inicio
   FimSe
 Fim
 ```
-**Atividade 3:**
+**3) Crie um algoritmo em Portugol que verifique  se o cliente consegue abrir o novo empréstimo. Para conseguir um novo empréstimo, o valor do empréstimo deve ser menor que 40% da sua média de saldo dos últimos 12 meses. Entre com o valor desejado do empréstimo e com a média do saldo**
+```portugol
+Inicio
+  Escreva "Insira a média do saldo: "
+  Leia media_saldo
+  Escreva "Insira o valor de empréstimo desejado"
+  Leia valor_desejado
+  Se valor_desejado <= (media_saldo*0.4) então
+    Escreva "Empréstimo aprovado!"
+  Senão
+    Escreva "Empréstimo negado"
+  FimSe
+Fim
+```
 
-
-## Aula 2 -  Algoritmos e Fluxogramas (23/01)
-**Atividade 1: Crie um algoritmo em Portugol para calcular o saldo de uma conta bancária após 12 meses, com um depósito mensal fixo**
+## Aula 2 -  Algoritmos e Fluxogramas (23/01) 🧩
+**1) Crie um algoritmo em Portugol para calcular o saldo de uma conta bancária após 12 meses, com um depósito mensal fixo**
 ```portugol
 Inicio
   Escreva "O valor inicial do saldo"
@@ -49,7 +60,7 @@ Inicio
 Fim
 ```
 
-**Atividade 2: Crie um algotirmo em Portugol para calcular o saldo de uma conta bancária com depósito mensal variável**
+**2) Crie um algotirmo em Portugol para calcular o saldo de uma conta bancária com depósito mensal variável**
 ```portugol
 Inicio
   Escreva "O valor inicial do saldo"
@@ -66,7 +77,7 @@ Inicio
 Fim
 ```
 
-**Atividade 3: Crie um algoritmo em Portugol para calcular o valor total do investimento, considerando uma aplicação inicial de R$1000,00 e depósitos variáveis ao longo de 12 meses. Considere uma taxa de rentabilidade mensal de 0,5%**
+**3) Crie um algoritmo em Portugol para calcular o valor total do investimento, considerando uma aplicação inicial de R$1000,00 e depósitos variáveis ao longo de 12 meses. Considere uma taxa de rentabilidade mensal de 0,5%**
 ```portugol
 Inicio
   aplicação = 1000,00
@@ -82,6 +93,6 @@ Inicio
   FimPara
 Fim
 ```
-
+## Aula 3 - Algoritmos e Fluxogramas (24/01) 🧩
 
 
