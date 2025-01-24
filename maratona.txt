@@ -1,0 +1,20 @@
+Inicio 
+
+  Escreva "Insira o valor da meta"
+  Leia m 
+  Escreva "Insira a quantia economizada por mês"
+  Leia s
+  meses = m/s
+  montante = 0
+
+  Se meses%1 != 0 então 
+    meses = inteiro(meses + 1)
+  FimSe
+
+  inteiro i
+  Para i em 1 até meses entao
+    montante = montante + s
+  FimPara
+
+  Escreva "Meses:" + meses
+  Escreva "Montante:" + montante
