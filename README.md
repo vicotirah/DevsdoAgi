@@ -1,6 +1,6 @@
 # Devs do Agi 🚀👩‍💻
 
-## Aula 1 - Algoritmos e Fluxogramas (22/01) 🧩
+## Aula 1 - Algoritmos (22/01) 🧩
 **1) Crie um algoritmo em Portugol para verificar se um cliente tem idade suficiente para abrir uma conta bancária (idade mínima: 18 anos)**
 ```portugol
 Inicio
@@ -41,7 +41,7 @@ Inicio
 Fim
 ```
 
-## Aula 2 -  Algoritmos e Fluxogramas (23/01) 🧩
+## Aula 2 -  Algoritmos (23/01) 🧩
 **1) Crie um algoritmo em Portugol para calcular o saldo de uma conta bancária após 12 meses, com um depósito mensal fixo**
 ```portugol
 Inicio
@@ -67,13 +67,13 @@ Inicio
   Leia saldo
 
   inteiro i 	
-  Para i de 0 até 11 faça
-    Escreva "Insira o valor do depósito do mês [i]"
+  Para i de 1 até 12 faça
+    Escreva "Insira o valor do depósito do mês " + i + " : "
     Leia dp_mensal
     saldo = saldo + dp_mensal
   FimPara
 
-  Escreva "Seu saldo final é:", saldo_final
+  Escreva "Seu saldo final é:" + saldo_final
 Fim
 ```
 
@@ -86,13 +86,21 @@ Inicio
   
   inteiro i
   Para i de 1 até 12 faça
-    Escreva "Insira o valor do depósito do mês [i]"
+    Escreva "Insira o valor do depósito do mês " + i + " : "
     Leia dp_mensal
-    saldo = saldo + saldo * taxa
-    saldo = saldo + dp_mensal
+    saldo = (saldo * (1 + taxa)) + dp_mensal
   FimPara
+  Escreva "Saldo Final: R$" + saldo
 Fim
 ```
-## Aula 3 - Algoritmos e Fluxogramas (24/01) 🧩
+## Aula 3 - Fluxograma (24/01) 🧩
+### Maratona 
+**1)C**
+```portugol
+```
+**6) Cálculo de Taxas Bancárias: Leia o saldo inicial de uma conta e calcule a taxa de manutenção (1% do saldo, mínimo de R$10). Exiba o saldo final após a taxa**
+```portugal
+```
+**7)Verificação de Limite de Saque: Leia o saldo de um saque.**
 
 
