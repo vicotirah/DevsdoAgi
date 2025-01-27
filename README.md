@@ -1,5 +1,10 @@
 # Devs do Agi 🚀👩‍💻
 
+## Links 🌐
+🔗Documentação Oficial em Inglês: [Documentação](https://docs.oracle.com/javase/tutorial/java/index.html) <br>
+🔗HackerRank - Java: [HackerRank](https://www.hackerrank.com/domains/java) <br>
+🔗Site Exercism: [Exercism](https://exercism.org) <br />
+
 ## Algoritmos 🧩
 ### Aula 1 - 22/01
 **1) Crie um algoritmo em Portugol para verificar se um cliente tem idade suficiente para abrir uma conta bancária (idade mínima: 18 anos)**
