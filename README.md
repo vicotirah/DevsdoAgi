@@ -1,6 +1,7 @@
 # Devs do Agi 🚀👩‍💻
 
-## Aula 1 - Algoritmos (22/01) 🧩
+## Algorimos 🧩
+### Aula 1 - 22/01
 **1) Crie um algoritmo em Portugol para verificar se um cliente tem idade suficiente para abrir uma conta bancária (idade mínima: 18 anos)**
 ```portugol
 Inicio
@@ -40,8 +41,8 @@ Inicio
   FimSe
 Fim
 ```
-
-## Aula 2 -  Algoritmos (23/01) 🧩
+##
+### Aula 2 - 23/01
 **1) Crie um algoritmo em Portugol para calcular o saldo de uma conta bancária após 12 meses, com um depósito mensal fixo**
 ```portugol
 Inicio
@@ -93,14 +94,120 @@ Inicio
   Escreva "Saldo Final: R$" + saldo
 Fim
 ```
-## Aula 3 - Fluxograma (24/01) 🧩
-### Maratona 
-**1)C**
+## Fluxograma 🧩
+### Aula 3 - 24/01
+### Esquenta
+**1) Cálculo de Juros: Leia o valor de um empréstimo, a taxa de juros mensal e o número de meses. Calcule e exiba o valor dos juros simples**
 ```portugol
+Início
+  Escreva "Insira o valor do emprestimo"
+  Leia emprestimo
+  taxa = 0,005
+  Escreva "Insira a quantidade de parcelas"
+  Leia mes
+  valor_juros = (emprestimo/mes) * taxa
+  valorParcela = emprestimo/mes + valor_juros	
+  Escreva "valor do juros simples: + valor_juros
+Fim
+```
+**2) Saldo Final Após Depósito: Leia o saldo inicial de uma conta bancária e um valor de depósito, exibindo o saldo final após o depósito**
+```portugol
+Início
+  Escreva "Insira o saldo inicial"
+  Leia saldo_i
+  Escreva "Insira o valor de depósito"
+  Leia deposito
+  saldo_f = saldo_i + deposito
+  Escreva "O saldo final é:" + saldo_f
+Fim
+```
+**3) Verificação de Crédito: Leia o salário de uma pessoa e o valor de empréstimo solicitado. Exiba se o crédito pode ser aprovado (empréstimo <= 30% do salário)**
+```portugol
+Início
+  Escreva "Insira o salario"
+  Leia salario
+  Escreva "Insira o valor do empréstimo"
+  Leia empr
+  Se empr <= (salario*0.3) então
+    Escreva "Crédito aprovado!"
+  Senão
+    Escreva "Crédito negado!"
+  FimSe
+Fim
+```
+**4) Conversão de Moeda: Leia o valor em reais e a cotação atual do dólar, convertendo o valor para dólares e exibindo o resultado**
+```portugol
+Início
+  Escreva "Insira o valor em reais: "
+  Leia real
+  dolar = 5.92
+  conversao = real/dolar
+  Escreva "O valor R$" + real + "é $" + conversao
+Fim
+```
+**5) Cálculo de Rendimento de Investimento: Leia o valor de um investimento inicial, a taxa de rendimento mensal, e o número de meses. Calcule e exiba o valor final do investimento**
+```portugol
+Início
+  Escreva "Insira o valor inicial investido"
+  Leia investimento_i
+  taxa_rend = 0.005
+  Escreva "Insira a quantidade de meses"
+  Leia meses
+  valor_f = investimento_i
+  inteiro i
+  Para i de 1 até meses faça 
+    valor_f = valor_f * (1 + taxa_rend)
+  FimPara
+  Escreva "O valor final é: R$" + valor_f
+Fim
 ```
 **6) Cálculo de Taxas Bancárias: Leia o saldo inicial de uma conta e calcule a taxa de manutenção (1% do saldo, mínimo de R$10). Exiba o saldo final após a taxa**
-```portugal
+```portugol
+Início
+  Leia saldo
+  taxa = 0.001
+  calculo = saldo*0.001
+  Se (saldo* 0.001) > 10 então
+    saldo_f = saldo - calculo 
+  Senão 
+    saldo_f = saldo - 10
+  FimSe
+  Escreva "O saldo é:" + saldo_f
+Fim
 ```
-**7)Verificação de Limite de Saque: Leia o saldo de um saque.**
+**7) Verificação de Limite de Saque: Leia o saldo de uma conta e o valor de um saque. Exiba se o saque é permitido (saldo>= valor do saque).**
+```portugol
+Início
+  Leia o saldo
+  Escreva "Qual o valor do saque?"
+  Leia saque
+  Se saldo >= saque então
+    Escreva "Saque liberado"
+  Senão 
+    Escreva "Saque negado"
+  FimSe
+Fim
+```
+**8) Simulação de Pagamento Parcelado: Leia o valor de uma compra e o número de parcelas, calculando o valor de cada parcela e exibindo o total pago com juros de 2% ao mês**
+```portugol
+Início
+  Escreva "Valor da compra:"
+  Leia valor_compra
+  Escreva "Número de parcelas:"
+  Leia parc
 
-
+  inteiro i 
+  para i em 1 até parc faça
+    valor_final = valor_final + (valor_compra/parc) * 0.02
+  FimPara
+  Escreva "Valor total" + valor_final
+Fim
+```
+**9) Análise de Perfil de Crédito: Leia o salário e as despesas mensais de uma pessoa. Calcule a margem de crédito (salário-despesa) disponível e exiba se é seguro conceber um empréstimo**
+```portugol
+```
+**10) Cálculo de Rendimentos Acumulados: Simule o crescimento do saldo de uma conta com depósitos fixos e rendimentos mensais considerando um período de 12 meses. Exiba o saldo final.**
+```portugol
+```
+##
+### Maratona 
