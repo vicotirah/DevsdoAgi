@@ -96,7 +96,7 @@ Fim
 ```
 ## Fluxograma 🧩
 ### Aula 3 - 24/01
-### Esquenta
+### Esquenta 🏋️‍♀️🏋️‍♂️🏋
 **1) Cálculo de Juros: Leia o valor de um empréstimo, a taxa de juros mensal e o número de meses. Calcule e exiba o valor dos juros simples**
 ```portugol
 Início
@@ -203,11 +203,47 @@ Início
   Escreva "Valor total" + valor_final
 Fim
 ```
-**9) Análise de Perfil de Crédito: Leia o salário e as despesas mensais de uma pessoa. Calcule a margem de crédito (salário-despesa) disponível e exiba se é seguro conceber um empréstimo**
+**9) Análise de Perfil de Crédito: Leia o salário e as despesas mensais de uma pessoa. Calcule a margem de crédito (salário-despesa) disponível e exiba se é seguro conceder um empréstimo**
 ```portugol
+Início
+  Leia salario, despesas
+  margemSegura = 0.35 
+  Se ((salario-despesas)/salario) <= margemSegura então
+    Escreva "Empréstimo concedido!"
+  Senão
+    Escreva "Empréstimo negado"
+  FimSe
+Fim
 ```
 **10) Cálculo de Rendimentos Acumulados: Simule o crescimento do saldo de uma conta com depósitos fixos e rendimentos mensais considerando um período de 12 meses. Exiba o saldo final.**
 ```portugol
+Início
+  Leia saldo, deposito, taxa
+  inteiro i
+  Para i de 1 até 12 faça
+    saldo = saldo * (1 + taxa) + depósito
+  FimPara
+  Escreva "Saldo final:" + saldo 
 ```
 ##
-### Maratona 
+### Maratona (Portugol e Fluxograma) 🏃‍♀️‍➡️🏃‍♂️‍➡️🏃‍➡️🏅
+### Economizando para uma Meta
+**Descrição do problema:** Você está economizando dinheiro para comprar um item que custa um valor M. Cada mês, você consegue poupar uma quantia fixa S. Seu objetivo é calcular em quantos meses você alcançará o valor necessário para comprar o item. O programa deve exibir um número inteiro representando a quantidade de meses necessários para alcançar ou ultrapassar o valor M. Um número real representando o valor total economizado.
+```portugol
+Início
+  Leia M, S
+  AS = 0
+  meses = 0
+  Enquanto AS < M faça
+    AS = AS + S
+    meses = meses + 1
+  FimEnquanto
+  Escreva "Meses:" + meses
+  Escreva "Valor economizado:" + AS
+Fim
+  
+
+```
+
+
+
