@@ -241,9 +241,10 @@ Início
   Escreva "Meses:" + meses
   Escreva "Valor economizado:" + AS
 Fim
-  
-
 ```
+<img width="425" alt="image" src="https://github.com/user-attachments/assets/e6bc2dec-ea2b-4e0d-85a6-d3fa0a06cb59" />
+
+
 
 
 
