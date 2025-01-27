@@ -1,6 +1,6 @@
 # Devs do Agi 🚀👩‍💻
 
-## Algorimos 🧩
+## Algoritmos 🧩
 ### Aula 1 - 22/01
 **1) Crie um algoritmo em Portugol para verificar se um cliente tem idade suficiente para abrir uma conta bancária (idade mínima: 18 anos)**
 ```portugol
