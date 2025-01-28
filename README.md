@@ -275,7 +275,7 @@ Fim
 <details open>
 <summary><h2>Conhecendo o Java ☕</h2></summary>
 <details>
-<h3>Hello World!</h3>
+<summary><h3>Hello World!</h3></summary>
 
 ```java
 package com.agibank.s2exemplo1;
@@ -288,11 +288,11 @@ public class Main {
 </details>
 
 <details>
-<summary><h3>Estruturas Condicionais</h3><summary>
+<summary><h3>Estruturas Condicionais</h3></summary>
 
 **1) Crie um programa que verifique se o número digitado é positivo, negativo ou zero**
 ```java
-package com.agibank.s2condicional.s2if1.;
+package com.agibank.s2condicional.s2if1;
 import java.util.Scanner;
 
 public class Main {
@@ -419,7 +419,7 @@ public class Main {
     }
 }
 ```
-
-
+</details>
+</details>
 
 
