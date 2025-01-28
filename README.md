@@ -1,7 +1,5 @@
 # Devs do Agi 🚀👩‍💻
 
-
-
 <details open>
 <summary><h2>Links Importantes 🌐</h2></summary>
 🔗Documentação Oficial: <a href="https://docs.oracle.com/javase/tutorial/java/index.html">Documentação em Inglês</a> <br>
@@ -12,13 +10,10 @@
 ##
 
 <details open>
-<summary><h1>Portugol ⚙️<h1><summary>
-<details open>
 <summary><h2>Algoritmos 🧩</h2></summary>
-
 <details>
 <summary><h3>Exercícios - Estruturas Condicionais</summary></h3>
-
+	
 **1) Crie um algoritmo em Portugol para verificar se um cliente tem idade suficiente para abrir uma conta bancária (idade mínima: 18 anos)**
 ```portugol
 Inicio
@@ -58,7 +53,9 @@ Inicio
   FimSe
 Fim
 ```
+
 </details>
+
 
 <details>
 <summary><h3>Exercícios - Estruturas de Repetição</summary></h3>
@@ -114,6 +111,7 @@ Inicio
   Escreva "Saldo Final: R$" + saldo
 Fim
 ```
+</details>
 </details>
 
 ##
@@ -276,11 +274,13 @@ Fim
 </details>
 </details>
 </details>
+
+
 ##
 
 <details open>
 <summary><h1>Java ☕</h1></summary>
-<details open>
+<details>
 <summary><h2>Conhecendo o Java 👀</h2></summary>
 <details>
 <summary><h3>Hello World!</h3></summary>
