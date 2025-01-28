@@ -249,7 +249,17 @@ Fim
 ```
 <img width="425" alt="image" src="https://github.com/user-attachments/assets/e6bc2dec-ea2b-4e0d-85a6-d3fa0a06cb59" />
 
-
+## Conhecendo o Java ☕
+### Aula 1 (27/01) - Hello World!
+```java
+package com.agibank.s2exemplo1;
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}
+```
+### Aula 2 (28/01) - 
 
 
 
