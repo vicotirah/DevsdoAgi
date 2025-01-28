@@ -1,12 +1,22 @@
 # Devs do Agi 🚀👩‍💻
 
-## Links 🌐
+
+
+<details open>
+<summary><h2>Links Importantes 🌐</h2></summary>
 🔗Documentação Oficial em Inglês: [Documentação](https://docs.oracle.com/javase/tutorial/java/index.html) <br>
 🔗HackerRank - Java: [HackerRank](https://www.hackerrank.com/domains/java) <br>
 🔗Site Exercism: [Exercism](https://exercism.org) <br />
+</details>
 
-## Algoritmos 🧩
-### Aula 1 - 22/01
+##
+
+<details open>
+<summary><h2>Algoritmos 🧩</h2></summary>
+
+<details>
+<summary><h3>Exercícios - Estruturas Condicionais</summary></h3>
+
 **1) Crie um algoritmo em Portugol para verificar se um cliente tem idade suficiente para abrir uma conta bancária (idade mínima: 18 anos)**
 ```portugol
 Inicio
@@ -46,8 +56,11 @@ Inicio
   FimSe
 Fim
 ```
-##
-### Aula 2 - 23/01
+</details>
+
+<details>
+<summary><h3>Exercícios - Estruturas de Repetição</summary></h3>
+
 **1) Crie um algoritmo em Portugol para calcular o saldo de uma conta bancária após 12 meses, com um depósito mensal fixo**
 ```portugol
 Inicio
@@ -99,9 +112,14 @@ Inicio
   Escreva "Saldo Final: R$" + saldo
 Fim
 ```
-## Fluxograma 🧩
-### Aula 3 - 24/01
-### Esquenta 🏋️‍♀️🏋️‍♂️🏋
+</details>
+
+<details open>
+<summary><h2>Fluxograma 🧩</h2></summary>
+
+<details>
+<summary><h3>Esquenta 🏋️‍♀️🏋️‍♂️🏋</h3></summary>
+
 **1) Cálculo de Juros: Leia o valor de um empréstimo, a taxa de juros mensal e o número de meses. Calcule e exiba o valor dos juros simples**
 ```portugol
 Início
@@ -230,8 +248,11 @@ Início
   FimPara
   Escreva "Saldo final:" + saldo 
 ```
-##
-### Maratona (Portugol e Fluxograma) 🏃‍♀️‍➡️🏃‍♂️‍➡️🏃‍➡️🏅
+</details>
+
+<details>
+<summary><h3>Maratona (Portugol e Fluxograma) 🏃‍♀️‍➡️🏃‍♂️‍➡️🏃‍➡️🏅</h3></summary>
+
 ### Economizando para uma Meta
 **Descrição do problema:** Você está economizando dinheiro para comprar um item que custa um valor M. Cada mês, você consegue poupar uma quantia fixa S. Seu objetivo é calcular em quantos meses você alcançará o valor necessário para comprar o item. O programa deve exibir um número inteiro representando a quantidade de meses necessários para alcançar ou ultrapassar o valor M. Um número real representando o valor total economizado.
 ```portugol
@@ -248,9 +269,14 @@ Início
 Fim
 ```
 <img width="425" alt="image" src="https://github.com/user-attachments/assets/e6bc2dec-ea2b-4e0d-85a6-d3fa0a06cb59" />
+</details>
+</details>
 
-## Conhecendo o Java ☕
-### Aula 1 (27/01) - Hello World!
+<details open>
+<summary><h2>Conhecendo o Java ☕</h2></summary>
+<details>
+<h3>Hello World!</h3>
+
 ```java
 package com.agibank.s2exemplo1;
 public class Main {
@@ -259,7 +285,141 @@ public class Main {
     }
 }
 ```
-### Aula 2 (28/01) - 
+</details>
+
+<details>
+<summary><h3>Estruturas Condicionais</h3><summary>
+
+**1) Crie um programa que verifique se o número digitado é positivo, negativo ou zero**
+```java
+package com.agibank.s2condicional.s2if1.;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int i = scan.nextInt();
+        scan.close();
+        if (i>0) {
+            System.out.println("Positive");
+        } else if (i == 0){
+            System.out.println("Zero");
+        } else {
+            System.out.println("Negative");
+        }
+    }
+}
+```
+
+**2) Crie um programa que verifique se o número digitado é par ou ímpar**
+```java
+package com.agibank.s2condicional.s2if2;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int i = scan.nextInt();
+        scan.close();
+        if (i%2 == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
+    }
+}
+```
+
+**3) Crie um programa que mostre a situação de um atleta de acordo com seu IMC**
+```java
+package com.agibank.s2condicional.s2if3;
+import java.util.Locale;
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner scan = new Scanner(System.in).useLocale(Locale.US);
+        System.out.print("Digite seu peso: ");
+        float p = scan.nextFloat();
+        System.out.print("Digite sua altura: ");
+        float h = scan.nextFloat();
+        scan.close();
+        double imc = p/Math.pow(h , 2);
+
+        if (imc <= 16) {
+            System.out.print("IMC:" + imc + "-Magreza Severa");
+        } else if ((imc > 16 ) && (imc <= 17)) {
+            System.out.print("IMC:" + imc + "-Magreza Moderada");
+        } else if ((imc > 17 ) && (imc <= 18.5)) {
+            System.out.print("IMC:" + imc + "-Magreza Leve");
+        } else if ((imc > 18.5 ) && (imc <= 25)) {
+            System.out.print("IMC:" + imc + "-Saudável");
+        } else if ((imc > 25 ) && (imc <= 30)) {
+            System.out.print("IMC:" + imc + "-Sobrepeso");
+        } else if ((imc > 30 ) && (imc <= 35)) {
+            System.out.print("IMC:" + imc + "-Obesidade Grau 1");
+        } else if ((imc > 35 ) && (imc <= 40)) {
+            System.out.print("IMC:" + imc + "-Obesidade Grau 2");
+        } else if (imc > 40 ) {
+            System.out.print("IMC:" + imc + "-Obesidade Grau 3");
+        }
+
+    }
+}
+```
+
+**4) Crie um programa que verifique o quanto um valor se aproxima da média em percentual. Entre com o valor e com a média**
+```java
+package com.agibank.s2condicional.s2if4;
+import java.util.Locale;
+import java.util.Scanner;
+import java.lang.Math;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner scan = new Scanner(System.in).useLocale(Locale.US);
+        
+        System.out.print("Digite a média: ");
+        float media = scan.nextFloat();
+        System.out.print("Digite o valor: ");
+        float valor = scan.nextFloat();
+        scan.close();
+        double percentagem = valor/media*100;
+
+        System.out.printf("Média: %.2f\nValor: %.2f\nPercentual: %.2f", media, valor, percentagem);
+
+    }
+}
+```
+
+**5) Crie um programa que mostre a situação de um aluno, através de sua nota final. <br> Aprovado: 6 ou mais; <br> Exame: 4 ou mais e menor que 6; <br> Reprovado: menor que 4**
+```java
+package com.agibank.s2condicional.s2if5;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner scan = new Scanner(System.in).useLocale(Locale.US);
+        System.out.print("Digite a nota do aluno: ");
+        float n = scan.nextFloat();
+        scan.close();
+
+        if (n >=6) {
+            System.out.print("Aprovado");
+        } else if ((n >= 4 ) && (n < 6)) {
+            System.out.print("Recuperação");
+        } else{
+            System.out.print("Reprovado");
+        }
+    }
+}
+```
+
 
 
 

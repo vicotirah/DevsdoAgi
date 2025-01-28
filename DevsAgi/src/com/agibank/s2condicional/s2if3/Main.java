@@ -1,4 +1,4 @@
-package com.agibank.s2if3;
+package com.agibank.s2condicional.s2if3;
 import java.util.Locale;
 import java.util.Scanner;
 import java.lang.Math;

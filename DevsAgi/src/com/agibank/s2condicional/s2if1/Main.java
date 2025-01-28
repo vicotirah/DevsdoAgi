@@ -1,4 +1,4 @@
-package com.agibank.s2if1;
+package com.agibank.s2condicional.s2if1;
 import java.util.Scanner;
 
 public class Main {
