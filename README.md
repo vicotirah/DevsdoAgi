@@ -4,13 +4,15 @@
 
 <details open>
 <summary><h2>Links Importantes 🌐</h2></summary>
-🔗Documentação Oficial em Inglês: [Documentação](https://docs.oracle.com/javase/tutorial/java/index.html) <br>
-🔗HackerRank - Java: [HackerRank](https://www.hackerrank.com/domains/java) <br>
-🔗Site Exercism: [Exercism](https://exercism.org) <br />
+🔗Documentação Oficial: <a href="https://docs.oracle.com/javase/tutorial/java/index.html">Documentação em Inglês</a> <br>
+🔗HackerRank - Java: <a href="https://www.hackerrank.com/domains/java">HackerRank</a><br>
+🔗Site Exercism: <a href="https://exercism.org">Exercism</a> <br />
 </details>
 
 ##
 
+<details open>
+<summary><h1>Portugol ⚙️<h1><summary>
 <details open>
 <summary><h2>Algoritmos 🧩</h2></summary>
 
@@ -273,11 +275,13 @@ Fim
 <img width="425" alt="image" src="https://github.com/user-attachments/assets/e6bc2dec-ea2b-4e0d-85a6-d3fa0a06cb59" />
 </details>
 </details>
-
+</details>
 ##
 
 <details open>
-<summary><h2>Conhecendo o Java ☕</h2></summary>
+<summary><h1>Java ☕</h1></summary>
+<details open>
+<summary><h2>Conhecendo o Java 👀</h2></summary>
 <details>
 <summary><h3>Hello World!</h3></summary>
 
