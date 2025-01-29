@@ -395,9 +395,13 @@ public class Main {
         System.out.print("Digite o valor: ");
         float valor = scan.nextFloat();
         scan.close();
-        double percentagem = valor/media*100;
+        double porcentagem = media - (valor/media*100);
 
-        System.out.printf("Média: %.2f\nValor: %.2f\nPercentual: %.2f", media, valor, percentagem);
+        if (porcentagem < 0 ){
+            porcentagem *= (-1);
+        }
+
+        System.out.printf("Média: %.2f\nValor: %.2f\nPercentual: %.2f", media, valor, porcentagem);
 
     }
 }
