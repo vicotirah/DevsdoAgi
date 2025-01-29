@@ -5,6 +5,7 @@
 🔗Documentação Oficial: <a href="https://docs.oracle.com/javase/tutorial/java/index.html">Documentação em Inglês</a> <br>
 🔗HackerRank - Java: <a href="https://www.hackerrank.com/domains/java">HackerRank</a><br>
 🔗Site Exercism: <a href="https://exercism.org">Exercism</a> <br />
+🔗Livro: <a href="https://a.co/d/50bqw9v">Java Guia do Programador</a> <br />	
 </details>
 
 ##
@@ -511,10 +512,21 @@ public class Main {
 }
 ```
 </details>
+
 <details>
 <summary><h3>Estruturas de Repetição</h3></summary>
 
+**1) Crie um programa que**
+```java
+```
 
+**2) Crie um programa que**
+```java
+```
+
+**3) Crie um programa que**
+```java
+```
 
 </details>
 
