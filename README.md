@@ -516,18 +516,82 @@ public class Main {
 <details>
 <summary><h3>Estruturas de Repetição</h3></summary>
 
-**1) Crie um programa que**
+**1) Implementar um programa que imprima a tabuada de um número digitado pelo usuário**
 ```java
+package com.agibank.s4repeticao.s2forwhile1;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+        int n, m;
+
+        System.out.print("Digite o número desejado: ");
+        n = sc.nextInt();
+        sc.close();
+
+        for (int i = 1; i <= 10; i++) {
+            m = n * i;
+            System.out.printf("%d x %d = %d\n", n, m, i);
+        }
+    }
+}
+```
+**2) Faça um programa que calcule e mostre o quadrado de um número N inteiro positivo, digitado pelo usuário. O cálculo deve ser feito através da soma dos N primeiros números ímpares. Ex:Se N=3 o programa calculará 1+3+5=9, que é quadrado de 3**
+```java
+package com.agibank.s4repeticao.s2forwhile2;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+        int n;
+        int soma = 0;
+        int odd = 1;
+
+        System.out.print("Digite o número desejado: ");
+        n = sc.nextInt();
+        sc.close();
+
+        for (int i = 0; i < n; i++) {
+            soma+=odd;
+            odd +=2;
+        }
+        System.out.print("O quadrado de " + n + "é" + soma);
+    }
+}
 ```
 
-**2) Crie um programa que**
+**3) Calcule a expressão sem utilizar a função pow() da math.h: X^Y. Onde X e Y são digitados pelo usuário**
 ```java
-```
+package com.agibank.s4repeticao.s2forwhile3;
+import java.util.Locale;
+import java.util.Scanner;
 
-**3) Crie um programa que**
-```java
-```
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+        int x, y;
 
+        System.out.print("Digite a base: ");
+        x = sc.nextInt();
+        System.out.print("Digite o expoente: ");
+        y = sc.nextInt();
+        sc.close();
+
+        int potencia = x;
+        for (int i = 1; i < y; i++) {
+            potencia *= x;
+        }
+        System.out.print("o valor " +x+ " elevado a " + y + " é " + potencia);
+    }
+}
+```
 </details>
 
 
