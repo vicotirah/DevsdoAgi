@@ -569,28 +569,134 @@ public class Main {
 **3) Calcule a expressão sem utilizar a função pow() da math.h: X^Y. Onde X e Y são digitados pelo usuário**
 ```java
 package com.agibank.s4repeticao.s2forwhile3;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Locale.setDefault(Locale.US);
-        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
-        int x, y;
+        Scanner sc = new Scanner(System.in);
+        int x, y, exp;
 
         System.out.print("Digite a base: ");
         x = sc.nextInt();
         System.out.print("Digite o expoente: ");
         y = sc.nextInt();
+        exp = Math.abs(y); //módulo do expoente
         sc.close();
 
-        int potencia = x;
-        for (int i = 1; i < y; i++) {
+        double potencia = 1;
+        for (int i = 0; i < exp; i++) {
             potencia *= x;
         }
-        System.out.print("o valor " +x+ " elevado a " + y + " é " + potencia);
+        if (y < 0) {
+            potencia = 1 / potencia;
+        }
+
+        System.out.printf("O valor %d elevado a %d é igual a %.4f", x, y, potencia);
     }
 }
+```
+**4) Faça um programa que calcule o fatorial de qualquer número digitado pelo usuário, sabendo que o fatorial de um número é o produtório dos números inteiros entre 1 e ele mesmo**
+```java
+package com.agibank.s5repeticao.s2forwhile1;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num;
+        int fat = 1;
+
+        System.out.print("Digite um número inteiro positivo: ");
+        num = sc.nextInt();
+
+        if (num == 0) {
+            System.out.printf("Fatorial de 0 é 1");
+        } else if (num<0){
+            System.out.printf("Não existe fatorial de número negativo");
+        } else {
+            for (int i = 1; i <= num; i++) {
+                fat *= i;
+            }
+            System.out.printf("%d! = %d", num, fat);
+        }
+    }
+}
+```
+
+**5) A sequência de Fibonacci segue a seguinte ordem: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ... <br>
+Repare que cada termo é a somatória dos dois anteriores, sendo que os dois primeiros são 0 e 1. <br>
+Faça um programa que receba um valor do usuário e imprima os termos da sequência menores que o número digitado**
+```java
+package com.agibank.s5repeticao.s2forwhile2;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num;
+        int a = 0, b = 1;
+
+        System.out.print("Insira o número desejado: ");
+        num = sc.nextInt();
+
+        System.out.println(a);
+
+        for (int i = 0; i < num; i++) {
+                int c = a + b;
+                a = b;
+                b = c;
+                System.out.println(a);
+            if (c>=num) {
+                break;
+            }
+        }
+    }
+}
+```
+
+**6) Em **
+```java
+package com.agibank.s5repeticao.s2forwhile3;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        float compra = 0, total = 0, desconto = 0;
+        float valor;
+        char cliente, prod;
+
+        do {
+            do {
+                System.out.print("Digite o valor do produto: \n");
+                valor = sc.nextFloat();
+                compra +=valor;
+                System.out.print("Adicionar outro produto? \n");
+                prod = sc.next().charAt(0);
+            }while (prod == 's');
+
+            if (compra <= 500){
+                desconto = (float) (compra*0.05);
+                total = compra - desconto;
+
+            } else if ((compra > 500) && (compra<=1000)){
+                desconto = (float) (compra*0.1);
+                total = compra - desconto;
+            } else {
+                desconto = (float) (compra*0.12);
+                total = compra - desconto;
+            }
+
+            System.out.printf("\nCompra: R$ %.2f\nDesconto: R$ %.2f" +
+                    "\nValor Total: R$ %.2f", compra, desconto, total);
+            compra=0;
+            System.out.print("\nPróximo cliente? \n");
+            cliente = sc.next().charAt(0);
+        } while (cliente=='s');
+        sc.close();
+    }
+}
+
 ```
 </details>
 
