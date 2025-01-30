@@ -10,7 +10,7 @@ public class Main {
         int soma = 0;
         int odd = 1;
 
-        System.out.print("Digite o número desejado: ");
+        System.out.print("Digite o número desejado (positivo): ");
         n = sc.nextInt();
         sc.close();
 

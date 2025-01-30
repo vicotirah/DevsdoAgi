@@ -1,24 +1,27 @@
 package com.agibank.s4repeticao.s2forwhile3;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Locale.setDefault(Locale.US);
-        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
-        int x, y;
+        Scanner sc = new Scanner(System.in);
+        int x, y, exp;
 
         System.out.print("Digite a base: ");
         x = sc.nextInt();
         System.out.print("Digite o expoente: ");
         y = sc.nextInt();
+        exp = Math.abs(y); //módulo do expoente
         sc.close();
 
-        int potencia = x;
-        for (int i = 1; i < y; i++) {
+        double potencia = 1;
+        for (int i = 0; i < exp; i++) {
             potencia *= x;
         }
-        System.out.print("o valor " +x+ " elevado a " + y + " é " + potencia);
+        if (y < 0) {
+            potencia = 1 / potencia;
+        }
+
+        System.out.printf("O valor %d elevado a %d é igual a %.4f", x, y, potencia);
     }
 }
 
