@@ -654,7 +654,34 @@ public class Main {
 }
 ```
 
-**6) Em **
+<strong>6) Em uma loja, todos os clientes que comprarem mais de R$300.00 receberão um desconto proporcional ao valor de sua compra, de acordo com a tabela:</strong>
+
+
+<table>
+	<thead>
+		<tr>
+			<th>Valor da Compra</th>
+			<th>Desconto(%)</th>
+	 	</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Até 500.00</td>
+			<td>5</td>
+		</tr>
+		<tr>
+			<td>De 501.00 a 1000</td>
+			<td>10</td>
+		</tr>
+				<tr>
+			<td>Acima de 1000</td>
+			<td>12</td>
+		</tr>
+	</tbody>
+</table>
+
+
+**Você foi incumbido de fazer um programa que permita que o cliente entre com o valor de cada produto comprado pelo cliente. Mostre o total da compra, o valor do desconto e o preço a pagar para cada cliente. Pergunte ao usuário se deseja terminar a digitação de produtos. Também é necessário verificar se existe mais clientes para serem atendidos**
 ```java
 package com.agibank.s5repeticao.s2forwhile3;
 import java.util.Scanner;
@@ -694,6 +721,193 @@ public class Main {
             cliente = sc.next().charAt(0);
         } while (cliente=='s');
         sc.close();
+    }
+}
+
+```
+</details>
+
+<details>
+<summary><h3>Esquenta 🏋️‍♀️🏋️‍♂️🏋</h3></summary>
+**1) O usuário informa seus gastos mensais um por um. O programa soma os valores e para quando um gastonegativo for digitado. Se o total ultrapassar R$5000, o programa exibe um alerta. **
+	
+```java
+package com.agibank.s6maratona1.s1esquenta.s2ex1;
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+        float gasto;
+        float totalGasto = 0;
+
+        do {
+            System.out.print("\nInsira o valor de pagamento ou digite um valor negativo para sair do programa: ");
+            gasto = sc.nextFloat();
+
+            if (gasto >=0) {
+                totalGasto += gasto;
+            }
+
+            if (totalGasto>= 5000) {
+                System.out.print("Seus gastos ultrapassaram R$5000!");
+            }
+
+        } while (gasto>=0);
+        sc.close();
+        System.out.printf("\nTotal gasto: %.2f", totalGasto);
+    }
+}	
+```
+**2) O usuário tem uma dívida e quer simular pagamentos mensais fixos. A cada mês, o saldo da dívida é reduzido pelo valor pago. O programa deve mostrar o saldo atualizado a cada mÊs até a dívida ser quitada**
+
+```java
+package com.agibank.s6maratona1.s1esquenta.s2ex2;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+        float saldo, saque;
+
+        System.out.print("\nInsira o valor do saldo : ");
+        saldo = sc.nextFloat();
+
+        do {
+            System.out.print("\nInsira o valor do saque: ");
+            saque = sc.nextFloat();
+
+            if (saque > 0) {
+                if (saldo < saque) {
+                    System.out.print("Erro: Saldo insuficiente!");
+                } else if ((saldo - saque) == 0) {
+                    saldo -= saque;
+                    System.out.print("Saldo zerado! Conta vazia!");
+                } else {
+                    saldo -= saque;
+                    System.out.printf("Novo Saldo: %.2f", saldo);
+                }
+            }
+
+        } while (saldo>0);
+    }
+}
+```
+**3) Simule um caixa eletrônico onde o usuário pode sacar dinheiro. O saldo inicial da conta será digitado pelo usuário e o usuário pode fazer saques até que o saldo acabe. Se o usuário tentar sacar mais do que tem, o programa exibe uma mensagem de erro. O programaacaba quando o valor saque for negativo ou quando a conta for zerada.**
+```java
+package com.agibank.s6maratona1.s1esquenta.s2ex3;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+        float divida, pagamento;
+        int cont = 1;
+
+        System.out.print("\nInsira o valor da divida : ");
+        divida = sc.nextFloat();
+
+        do {
+            System.out.printf("\nInsira o valor do pagamento do mês %d: ", cont);
+            pagamento = sc.nextFloat();
+            if (pagamento >= 0) {
+                divida -= pagamento;
+                if (divida < 0) {
+                    divida = 0;
+                }
+                System.out.printf("Mês %d - Saldo restante: R$ %.2f", cont, divida);
+                cont++;
+            } else {
+                System.out.print("\nInsira um valor positivo! ");
+            }
+        } while (divida>0);
+
+        System.out.printf("\nMês %d - Divida quitada!", cont);
+    }
+}
+```
+**4) Um usuário deseja coverter Reais em Dólares, mas há um limite diário de R$1000 para conversão. O programa deve perguntar o valor desejado, verificar se está dentro do limite e calcular a conversão com uma taxa de câmbio de 1$ = 5R$. O programa termina quando o valor a ser convertido for negativo ou quando atingir o limite diário**
+
+```java
+package com.agibank.s6maratona1.s1esquenta.s2ex4;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+        float real, dolar;
+        float limite = 0;
+
+        do {
+            System.out.print("\nInsira o valor a converter ou um valor negativo para sair: ");
+            real = sc.nextFloat();
+            limite += real;
+            if (((real <= 1000) && (real > 0) && (limite <1000))) {
+                dolar = real / 5;
+                System.out.printf("Você receberá: $ %.2f", dolar);
+            } else if (limite >= 1000) {
+                System.out.print("\nLimite de R$1000 atingido. Encerrando transações.");
+                break;
+            }
+        } while (real > 0);
+
+    }
+}
+```
+</details>
+
+<details>
+<summary><h3>Maratona (Portugol e Fluxograma) 🏃‍♀️‍➡️🏃‍♂️‍➡️🏃‍➡️🏅</h3></summary>
+
+**Descrição do problema: Uma das primeiras apliacações de computadores foi o cálculo de trajetória de projetéis. Se um projeto é atirado com uma velocidade inicial V(m/s) a um ângulo de inclinação θ (radianos), sua posição no plano vertical (x,y) no tempo t (segundos) é calculada) pelas fórmulas: <br>
+x = v * cos(θ)*t <br>
+y = (v*sen(θ)*t) - (0,5g * t²) <br>
+onde: 0<θ<2 e g=9.8m/s² <br>
+Faça um programa que, dados os parâmetros θ e v, liste as coordenadas x e y em intervalos de 0.01s para um tiro em particular, terminando a listagem quando o projétil atingir o solo.
+**
+
+```java
+package com.agibank.s6maratona1.s2avaliacao;
+import java.util.Locale;
+import java.util.Scanner;
+/* Proprietario Nome: Victoria Rocha nota: 100
+*  Tester Nome: Leandro Rocha */
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
+        float vInicial, graus;
+        float t=0.01F, g= 9.8F;
+        double x = 0, y =0;
+        double rad;
+        int cont = 0;
+
+        System.out.print("Insira a velocidade inicial em m/s: ");
+        vInicial = sc.nextFloat();
+
+        System.out.print("Insira o ângulo em graus: ");
+        graus = sc.nextFloat();
+        rad = Math.toRadians(graus);
+
+         if (((rad > 0) && (rad < 2)) && ((vInicial>0))) {
+            do  {
+                cont ++;
+                x = vInicial * Math.cos(rad) * t;
+                y = ((vInicial * Math.sin(rad) * t) - (0.5 * g * Math.pow(t, 2)));
+                System.out.printf("\nPosição %d:", cont);
+                System.out.printf("\n X: %.2f | Y: %.2f", x, y);
+                t++;
+            } while (y > 0);
+        }
     }
 }
 
