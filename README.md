@@ -11,6 +11,8 @@
 ##
 
 <details open>
+<summary><h1>Lógica de Programação ⚙️</h1></summary>	
+<details>
 <summary><h2>Algoritmos 🧩</h2></summary>
 <details>
 <summary><h3>Exercícios - Estruturas Condicionais</summary></h3>
@@ -115,9 +117,7 @@ Fim
 </details>
 </details>
 
-##
-
-<details open>
+<details>
 <summary><h2>Fluxograma 🧩</h2></summary>
 
 <details>
@@ -275,14 +275,14 @@ Fim
 </details>
 </details>
 </details>
-
+</details>
 
 ##
 
 <details open>
 <summary><h1>Java ☕</h1></summary>
 <details>
-<summary><h2>Conhecendo o Java 👀</h2></summary>
+<summary><h2>Programação em Java 👩‍💻</h2></summary>
 <details>
 <summary><h3>Hello World!</h3></summary>
 
@@ -917,7 +917,11 @@ public class Main {
 <details>
 <summary><h3>Vetores</h3></summary>
 
- **1)**
+ <strong>1) Crie um programa que recebe um vetor com os preços diários de uma ação ao longo de 10 dias. O programa deve:<br> 
+- identificar se o mercado está em uma tendêndia de alta (preços aumentam continuamente em 3 dias consecutivos);<br>
+- Exibir os dias que compõem essa tendência;<br>
+- Caso contrário, exibir "Sem tendência de alta identificada.<br></strong>
+
 ```java
 package com.agibank.s7vetores.s2ex1;
 import java.util.Scanner;
@@ -945,6 +949,140 @@ public class Main {
     }
 }
 ```
+
+**2) A média móvel de um ativo financeiro é usada para suavizar flutuações de curto prazo e identificar tendências. Crie um programa que:<br>**
+**-Receba os preços de um ativo nos últimos 7 dias;<br>
+-Calcule a média móvel simples dos últimos 3 dias**
+
+```java
+package com.agibank.s7vetores.s2ex2;
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
+        float [] vet = new float[7];
+        float media = 0;
+
+        for (int i = 1; i <=7 ; i++) {
+            System.out.printf("\nDia %d - Preço do ativo: ", i);
+            vet[i-1] = sc.nextFloat();
+
+            if (i==7) {
+                media = (vet[6] + vet[5] + vet[4])/3;
+                System.out.printf("\nMédia: %.2f", media);
+            }
+        }
+    }
+}
+```
+**3) Receba os valores de ações de um ativo referente a 5 dias de negociação. Calcule o crescimento percentual acumulado em 5 dias.<br>
+Considere: crescimento diário = ((valor atual - valor anterior)/valor anterior)**
+
+```java
+package com.agibank.s7vetores.s2ex3;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
+        float [] vet = new float[5];
+        float crescDiario = 0, anterior=0, porcentagem=0;
+        float atual;
+
+        System.out.print("Insira o valor inicial:");
+        anterior = sc.nextFloat();
+
+        for (int i = 0; i <5 ; i++) {
+            System.out.print("\nDia " + (i+1) + " - Preço do ativo: ");
+            atual = sc.nextFloat();
+
+            if (atual > 0) {
+                crescDiario += (atual-anterior)/anterior;
+                anterior = atual;
+            } else {
+                System.out.print("\nValor inválido!\n");
+            }
+        }
+
+        System.out.printf("\nCrescimento acumulado: %.2f%%", (crescDiario*100) );
+    }
+}
+```
+
+**4) Crie um programa que receba os preços do fechamento durante 10 dias e exiba o maior e menor preço registrado **
+
+```java
+package com.agibank.s7vetores.s2ex4;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
+        float [] vet = new float[10];
+        float maiorNum = 0, menorNum = 0;
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print("\nDia " +(i+1)+ " - Insira o preço: ");
+            vet[i] = sc.nextFloat();
+
+            if (i == 0) {
+                menorNum = vet[i];
+                maiorNum = vet[i];
+            } else {
+                if (vet[i] > maiorNum) {
+                    maiorNum = vet[i];
+                } else if (vet[i] < menorNum) {
+                    menorNum = vet[i];
+                }
+            }
+        }
+
+        System.out.printf("\nMaior valor: %.2f | Menor valor: %.2f", maiorNum, menorNum);
+
+    }
+}
+```
+
+**5) Crie um programa que receba um vetor com os preços diários de uma ação por 5 dias e calcule a variação percentual diária**
+**Fórmula: variação = ((valor atual - valor anterior)/valor anterior) x 100**
+
+```java
+package com.agibank.s7vetores.s2ex5;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
+        float [] vet = new float [5];
+        float [] vari = new float [4];
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("\nDia" +(i+1)+ " - Insira o preço da ação: ");
+            vet[i] = sc.nextFloat();
+            System.out.printf("\nPreços: %.2f", vet[i]);
+
+            if (i>=1){
+                    vari[i-1]= ((vet[i] - vet[i-1])/vet[i-1])*100;
+                    System.out.printf("\nVariação: %.2f%%", vari[i-1]);
+                }
+            }
+        }
+    }
+```
+
  
 </details>
 
