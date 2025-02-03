@@ -14,7 +14,7 @@ public class Main {
         double rad;
         int cont = 0;
 
-        System.out.print("Insira a velocidade inicial em m/s²: ");
+        System.out.print("Insira a velocidade inicial em m/s: ");
         vInicial = sc.nextFloat();
 
         System.out.print("Insira o ângulo em graus: ");

@@ -10,7 +10,6 @@ public class Main {
         float [] vet = new float[7];
         float media = 0;
 
-
         for (int i = 1; i <=7 ; i++) {
             System.out.printf("\nDia %d - Preço do ativo: ", i);
             vet[i-1] = sc.nextFloat();
@@ -20,8 +19,5 @@ public class Main {
                 System.out.printf("\nMédia: %.2f", media);
             }
         }
-
-
-
     }
 }

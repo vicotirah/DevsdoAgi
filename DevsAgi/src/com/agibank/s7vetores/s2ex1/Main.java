@@ -9,8 +9,8 @@ public class Main {
 
         float[] vet = new float[10];
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.print("\nInsira o valor da ação no dia " + i + " : ");
+        for (int i = 0; i < 10; i++) {
+            System.out.print("\nInsira o valor da ação no dia " + (i+1) + " : ");
             vet[i] = sc.nextFloat();
             System.out.printf("\nPosição %d: %.2f\n", i, vet[i]);
 
