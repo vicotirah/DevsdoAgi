@@ -295,7 +295,8 @@ public class Main {
 }
 ```
 </details>
-
+<details>
+<summary><h3>Estruturas</h3></summary>
 <details>
 <summary><h3>Estruturas Condicionais</h3></summary>
 
@@ -491,8 +492,7 @@ public class Main {
 ```
 </details>
 
-<details>
-<summary><h3>Estruturas</h3></summary>
+
 <details>
 <summary><h3>Estruturas de Repetição</h3></summary>
 
@@ -825,7 +825,7 @@ public class Main {
 </details>
 
 <details>
-<summary><h3>Maratona (Portugol e Fluxograma) 🏃‍♀️‍➡️🏃‍♂️‍➡️🏃‍➡️🏅</h3></summary>
+<summary><h3>Maratona🏃‍♀️‍➡️🏃‍♂️‍➡️🏃‍➡️🏅</h3></summary>
 
 **Descrição do problema: Uma das primeiras apliacações de computadores foi o cálculo de trajetória de projetéis. Se um projeto é atirado com uma velocidade inicial V(m/s) a um ângulo de inclinação θ (radianos), sua posição no plano vertical (x,y) no tempo t (segundos) é calculada) pelas fórmulas: <br>
 x = v * cos(θ)*t <br>
@@ -872,6 +872,7 @@ public class Main {
 }
 
 ```
+</details>
 </details>
 </details>
 </details>
@@ -1039,12 +1040,7 @@ public class Main {
         }
     }
 ```
-
- 
 </details>
-
-
-
 </details>
 
 
