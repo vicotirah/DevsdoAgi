@@ -6,12 +6,8 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int i = scan.nextInt();
         scan.close();
-        if (i>0) {
-            System.out.println("Positive");
-        } else if (i == 0){
-            System.out.println("Zero");
-        } else {
-            System.out.println("Negative");
-        }
+        if (i>0) System.out.println("Positive");
+        else if (i == 0)System.out.println("Zero");
+        else System.out.println("Negative");
     }
 }

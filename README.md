@@ -309,13 +309,9 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int i = scan.nextInt();
         scan.close();
-        if (i>0) {
-            System.out.println("Positive");
-        } else if (i == 0){
-            System.out.println("Zero");
-        } else {
-            System.out.println("Negative");
-        }
+        if (i>0) System.out.println("Positive");
+        else if (i == 0)System.out.println("Zero");
+        else System.out.println("Negative");
     }
 }
 ```
@@ -330,11 +326,8 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         int i = scan.nextInt();
         scan.close();
-        if (i%2 == 0) {
-            System.out.println("Even");
-        } else {
-            System.out.println("Odd");
-        }
+        if (i%2 == 0) System.out.println("Even");
+        else System.out.println("Odd");
     }
 }
 ```
@@ -357,24 +350,14 @@ public class Main {
         scan.close();
         double imc = p/Math.pow(h , 2);
 
-        if (imc <= 16) {
-            System.out.print("IMC:" + imc + "-Magreza Severa");
-        } else if ((imc > 16 ) && (imc <= 17)) {
-            System.out.print("IMC:" + imc + "-Magreza Moderada");
-        } else if ((imc > 17 ) && (imc <= 18.5)) {
-            System.out.print("IMC:" + imc + "-Magreza Leve");
-        } else if ((imc > 18.5 ) && (imc <= 25)) {
-            System.out.print("IMC:" + imc + "-Saudável");
-        } else if ((imc > 25 ) && (imc <= 30)) {
-            System.out.print("IMC:" + imc + "-Sobrepeso");
-        } else if ((imc > 30 ) && (imc <= 35)) {
-            System.out.print("IMC:" + imc + "-Obesidade Grau 1");
-        } else if ((imc > 35 ) && (imc <= 40)) {
-            System.out.print("IMC:" + imc + "-Obesidade Grau 2");
-        } else if (imc > 40 ) {
-            System.out.print("IMC:" + imc + "-Obesidade Grau 3");
-        }
-
+        if (imc <= 16) System.out.print("IMC:" + imc + "-Magreza Severa");
+        else if ((imc > 16 ) && (imc <= 17)) System.out.print("IMC:" + imc + "-Magreza Moderada");
+        else if ((imc > 17 ) && (imc <= 18.5)) System.out.print("IMC:" + imc + "-Magreza Leve");
+        else if ((imc > 18.5 ) && (imc <= 25)) System.out.print("IMC:" + imc + "-Saudável");
+        else if ((imc > 25 ) && (imc <= 30)) System.out.print("IMC:" + imc + "-Sobrepeso");
+        else if ((imc > 30 ) && (imc <= 35)) System.out.print("IMC:" + imc + "-Obesidade Grau 1");
+        else if ((imc > 35 ) && (imc <= 40)) System.out.print("IMC:" + imc + "-Obesidade Grau 2");
+        else if (imc > 40 ) System.out.print("IMC:" + imc + "-Obesidade Grau 3");
     }
 }
 ```
@@ -419,13 +402,9 @@ public class Main {
         float n = scan.nextFloat();
         scan.close();
 
-        if (n >=6) {
-            System.out.print("Aprovado");
-        } else if ((n >= 4 ) && (n < 6)) {
-            System.out.print("Recuperação");
-        } else{
-            System.out.print("Reprovado");
-        }
+        if (n >=6) System.out.print("Aprovado");
+        else if ((n >= 4 ) && (n < 6)) System.out.print("Recuperação");
+        else System.out.print("Reprovado");
     }
 }
 ```
@@ -459,8 +438,7 @@ public class Main {
             case 4:
                 System.out.print("Investimento: FII");
                 break;
-            default:
-                System.out.print("Insira uma opção válida");
+            default: System.out.print("Insira uma opção válida");
         }
     }
 }
@@ -717,6 +695,8 @@ public class Main {
 </details>
 
 <details>
+<summary><h3>Avaliação - Estruturas </h3></summary>
+<details>
 <summary><h3>Esquenta 🏋️‍♀️🏋️‍♂️🏋</h3></summary>
 **1) O usuário informa seus gastos mensais um por um. O programa soma os valores e para quando um gastonegativo for digitado. Se o total ultrapassar R$5000, o programa exibe um alerta. **
 	
@@ -890,6 +870,7 @@ public class Main {
 }
 
 ```
+</details>
 </details>
 
 <details>

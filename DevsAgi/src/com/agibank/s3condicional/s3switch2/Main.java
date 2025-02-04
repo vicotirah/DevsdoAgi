@@ -35,8 +35,7 @@ public class Main {
             case 5:
                 System.out.print("Muito Bom - Obrigado por responder a pesquisa! Ficamos felizes!");
                 break;
-            default:
-                System.out.print("Insira uma opção válida");
+            default: System.out.print("Insira uma opção válida");
         }
     }
 }

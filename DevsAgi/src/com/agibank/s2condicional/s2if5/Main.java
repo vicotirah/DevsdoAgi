@@ -10,13 +10,9 @@ public class Main {
         float n = scan.nextFloat();
         scan.close();
 
-        if (n >=6) {
-            System.out.print("Aprovado");
-        } else if ((n >= 4 ) && (n < 6)) {
-            System.out.print("Recuperação");
-        } else{
-            System.out.print("Reprovado");
-        }
+        if (n >=6) System.out.print("Aprovado");
+        else if ((n >= 4 ) && (n < 6)) System.out.print("Recuperação");
+        else System.out.print("Reprovado");
     }
 }
 
