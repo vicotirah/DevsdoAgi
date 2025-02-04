@@ -21,9 +21,7 @@ public class Main {
             if (atual > 0) {
                 crescDiario += (atual-anterior)/anterior;
                 anterior = atual;
-            } else {
-                System.out.print("\nValor inválido!\n");
-            }
+            } else System.out.print("\nValor inválido!\n");
         }
 
         System.out.printf("\nCrescimento acumulado: %.2f%%", (crescDiario*100) );

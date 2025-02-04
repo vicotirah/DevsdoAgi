@@ -10,14 +10,10 @@ public class Main {
         System.out.print("Digite um número inteiro positivo: ");
         num = sc.nextInt();
 
-        if (num == 0) {
-            System.out.printf("Fatorial de 0 é 0");
-        } else if (num<0){
-            System.out.printf("Não existe fatorial de número negativo");
-        } else {
-            for (int i = 1; i <= num; i++) {
-                fat *= i;
-            }
+        if (num == 0) System.out.printf("Fatorial de 0 é 0");
+        else if (num<0)System.out.printf("Não existe fatorial de número negativo");
+        else {
+            for (int i = 1; i <= num; i++) fat *= i;
             System.out.printf("%d! = %d", num, fat);
         }
     }

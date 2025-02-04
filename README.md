@@ -584,13 +584,8 @@ public class Main {
         sc.close();
 
         double potencia = 1;
-        for (int i = 0; i < exp; i++) {
-            potencia *= x;
-        }
-        if (y < 0) {
-            potencia = 1 / potencia;
-        }
-
+        for (int i = 0; i < exp; i++) potencia *= x;
+        if (y < 0) potencia = 1 / potencia;
         System.out.printf("O valor %d elevado a %d é igual a %.4f", x, y, potencia);
     }
 }
@@ -609,14 +604,10 @@ public class Main {
         System.out.print("Digite um número inteiro positivo: ");
         num = sc.nextInt();
 
-        if (num == 0) {
-            System.out.printf("Fatorial de 0 é 1");
-        } else if (num<0){
-            System.out.printf("Não existe fatorial de número negativo");
-        } else {
-            for (int i = 1; i <= num; i++) {
-                fat *= i;
-            }
+        if (num == 0) System.out.printf("Fatorial de 0 é 1");
+        else if (num<0) System.out.printf("Não existe fatorial de número negativo");
+        else {
+            for (int i = 1; i <= num; i++) fat *= i;
             System.out.printf("%d! = %d", num, fat);
         }
     }
@@ -646,9 +637,7 @@ public class Main {
                 a = b;
                 b = c;
                 System.out.println(a);
-            if (c>=num) {
-                break;
-            }
+            if (c>=num) break;
         }
     }
 }
@@ -747,19 +736,14 @@ public class Main {
             System.out.print("\nInsira o valor de pagamento ou digite um valor negativo para sair do programa: ");
             gasto = sc.nextFloat();
 
-            if (gasto >=0) {
-                totalGasto += gasto;
-            }
-
-            if (totalGasto>= 5000) {
-                System.out.print("Seus gastos ultrapassaram R$5000!");
-            }
+            if (gasto >=0) totalGasto += gasto;
+            if (totalGasto>= 5000) System.out.print("Seus gastos ultrapassaram R$5000!");
 
         } while (gasto>=0);
         sc.close();
         System.out.printf("\nTotal gasto: %.2f", totalGasto);
     }
-}	
+}
 ```
 **2) O usuário tem uma dívida e quer simular pagamentos mensais fixos. A cada mês, o saldo da dívida é reduzido pelo valor pago. O programa deve mostrar o saldo atualizado a cada mÊs até a dívida ser quitada**
 
@@ -782,9 +766,8 @@ public class Main {
             saque = sc.nextFloat();
 
             if (saque > 0) {
-                if (saldo < saque) {
-                    System.out.print("Erro: Saldo insuficiente!");
-                } else if ((saldo - saque) == 0) {
+                if (saldo < saque) System.out.print("Erro: Saldo insuficiente!");
+                else if ((saldo - saque) == 0) {
                     saldo -= saque;
                     System.out.print("Saldo zerado! Conta vazia!");
                 } else {
@@ -792,7 +775,6 @@ public class Main {
                     System.out.printf("Novo Saldo: %.2f", saldo);
                 }
             }
-
         } while (saldo>0);
     }
 }
@@ -818,14 +800,10 @@ public class Main {
             pagamento = sc.nextFloat();
             if (pagamento >= 0) {
                 divida -= pagamento;
-                if (divida < 0) {
-                    divida = 0;
-                }
+                if (divida < 0) divida = 0;
                 System.out.printf("Mês %d - Saldo restante: R$ %.2f", cont, divida);
                 cont++;
-            } else {
-                System.out.print("\nInsira um valor positivo! ");
-            }
+            } else System.out.print("\nInsira um valor positivo! ");
         } while (divida>0);
 
         System.out.printf("\nMês %d - Divida quitada!", cont);
@@ -905,7 +883,7 @@ public class Main {
                 y = ((vInicial * Math.sin(rad) * t) - (0.5 * g * Math.pow(t, 2)));
                 System.out.printf("\nPosição %d:", cont);
                 System.out.printf("\n X: %.2f | Y: %.2f", x, y);
-                t++;
+                t+=0.01;
             } while (y > 0);
         }
     }
@@ -938,12 +916,9 @@ public class Main {
             System.out.print("\nInsira o valor da ação no dia " + (i+1) + " : ");
             vet[i] = sc.nextFloat();
 
-            if (i >= 3) {
-                if ((vet[i] > vet[i - 1]) && (vet[i - 1] > vet[i - 2])) {
-                    System.out.printf("\nTendência de alta!\nDias: %d, %d, %d\n", i - 1, i , i+1);
-                } else {
-                    System.out.print("\nSem tendência de alta identificada\n");
-                }
+            if (i >= 2) {
+                if ((vet[i] > vet[i - 1]) && (vet[i - 1] > vet[i - 2])) System.out.printf("\nTendência de alta!\nDias: %d, %d, %d\n", (i-1), i, (i+1));
+                else System.out.print("\nSem tendência de alta identificada\n");
             }
         }
     }
@@ -1006,9 +981,7 @@ public class Main {
             if (atual > 0) {
                 crescDiario += (atual-anterior)/anterior;
                 anterior = atual;
-            } else {
-                System.out.print("\nValor inválido!\n");
-            }
+            } else System.out.print("\nValor inválido!\n");
         }
 
         System.out.printf("\nCrescimento acumulado: %.2f%%", (crescDiario*100) );

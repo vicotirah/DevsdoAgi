@@ -18,11 +18,8 @@ public class Main {
                 menorNum = vet[i];
                 maiorNum = vet[i];
             } else {
-                if (vet[i] > maiorNum) {
-                    maiorNum = vet[i];
-                } else if (vet[i] < menorNum) {
-                    menorNum = vet[i];
-                }
+                if (vet[i] > maiorNum) maiorNum = vet[i];
+                else if (vet[i] < menorNum) menorNum = vet[i];
             }
         }
 

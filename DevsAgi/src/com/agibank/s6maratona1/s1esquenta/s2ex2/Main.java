@@ -16,9 +16,8 @@ public class Main {
             saque = sc.nextFloat();
 
             if (saque > 0) {
-                if (saldo < saque) {
-                    System.out.print("Erro: Saldo insuficiente!");
-                } else if ((saldo - saque) == 0) {
+                if (saldo < saque) System.out.print("Erro: Saldo insuficiente!");
+                else if ((saldo - saque) == 0) {
                     saldo -= saque;
                     System.out.print("Saldo zerado! Conta vazia!");
                 } else {
@@ -26,7 +25,6 @@ public class Main {
                     System.out.printf("Novo Saldo: %.2f", saldo);
                 }
             }
-
         } while (saldo>0);
     }
 }

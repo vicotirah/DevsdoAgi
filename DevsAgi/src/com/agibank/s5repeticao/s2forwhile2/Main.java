@@ -17,9 +17,7 @@ public class Main {
                 a = b;
                 b = c;
                 System.out.println(a);
-            if (c>=num) {
-                break;
-            }
+            if (c>=num) break;
         }
     }
 }

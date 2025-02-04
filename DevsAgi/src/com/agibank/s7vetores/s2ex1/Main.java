@@ -12,14 +12,10 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             System.out.print("\nInsira o valor da ação no dia " + (i+1) + " : ");
             vet[i] = sc.nextFloat();
-            System.out.printf("\nPosição %d: %.2f\n", i, vet[i]);
 
-            if (i >= 3) {
-                if ((vet[i] > vet[i - 1]) && (vet[i - 1] > vet[i - 2])) {
-                    System.out.printf("\nTendência de alta!\nDias: %d, %d, %d\n", i - 2, i - 1, i);
-                } else {
-                    System.out.print("\nSem tendência de alta identificada\n");
-                }
+            if (i >= 2) {
+                if ((vet[i] > vet[i - 1]) && (vet[i - 1] > vet[i - 2])) System.out.printf("\nTendência de alta!\nDias: %d, %d, %d\n", (i-1), i, (i+1));
+                else System.out.print("\nSem tendência de alta identificada\n");
             }
         }
     }

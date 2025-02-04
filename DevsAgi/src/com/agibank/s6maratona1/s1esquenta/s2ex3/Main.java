@@ -17,14 +17,10 @@ public class Main {
             pagamento = sc.nextFloat();
             if (pagamento >= 0) {
                 divida -= pagamento;
-                if (divida < 0) {
-                    divida = 0;
-                }
+                if (divida < 0) divida = 0;
                 System.out.printf("Mês %d - Saldo restante: R$ %.2f", cont, divida);
                 cont++;
-            } else {
-                System.out.print("\nInsira um valor positivo! ");
-            }
+            } else System.out.print("\nInsira um valor positivo! ");
         } while (divida>0);
 
         System.out.printf("\nMês %d - Divida quitada!", cont);
