@@ -11,7 +11,7 @@ public class Main {
         scan.close();
 
         if (n >=6) System.out.print("Aprovado");
-        else if ((n >= 4 ) && (n < 6)) System.out.print("Recuperação");
+        else if (n >= 4) System.out.print("Recuperação");
         else System.out.print("Reprovado");
     }
 }

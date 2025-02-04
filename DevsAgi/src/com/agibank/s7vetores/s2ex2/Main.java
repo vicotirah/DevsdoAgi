@@ -13,7 +13,6 @@ public class Main {
         for (int i = 1; i <=7 ; i++) {
             System.out.printf("\nDia %d - Preço do ativo: ", i);
             vet[i-1] = sc.nextFloat();
-
             if (i==7) {
                 media = (vet[6] + vet[5] + vet[4])/3;
                 System.out.printf("\nMédia: %.2f", media);

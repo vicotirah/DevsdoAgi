@@ -28,7 +28,7 @@ public class Main {
                 y = ((vInicial * Math.sin(rad) * t) - (0.5 * g * Math.pow(t, 2)));
                 System.out.printf("\nPosição %d:", cont);
                 System.out.printf("\n X: %.2f | Y: %.2f", x, y);
-                t+=0.01;
+                t+=0.01F;
             } while (y > 0);
         }
     }

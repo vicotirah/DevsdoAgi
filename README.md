@@ -15,7 +15,7 @@
 <details>
 <summary><h2>Algoritmos 🧩</h2></summary>
 <details>
-<summary><h3>Exercícios - Estruturas Condicionais</summary></h3>
+<summary><h3>Exercícios - Estruturas Condicionais</h3></summary>
 	
 **1) Crie um algoritmo em Portugol para verificar se um cliente tem idade suficiente para abrir uma conta bancária (idade mínima: 18 anos)**
 ```portugol
@@ -61,7 +61,7 @@ Fim
 
 
 <details>
-<summary><h3>Exercícios - Estruturas de Repetição</summary></h3>
+<summary><h3>Exercícios - Estruturas de Repetição</h3></summary>
 
 **1) Crie um algoritmo em Portugol para calcular o saldo de uma conta bancária após 12 meses, com um depósito mensal fixo**
 ```portugol
@@ -275,7 +275,6 @@ Fim
 </details>
 </details>
 </details>
-</details>
 
 ##
 
@@ -404,7 +403,7 @@ public class Main {
         scan.close();
 
         if (n >=6) System.out.print("Aprovado");
-        else if ((n >= 4 ) && (n < 6)) System.out.print("Recuperação");
+        else if (n >= 4 ) System.out.print("Recuperação");
         else System.out.print("Reprovado");
     }
 }
@@ -584,8 +583,8 @@ public class Main {
         System.out.print("Digite um número inteiro positivo: ");
         num = sc.nextInt();
 
-        if (num == 0) System.out.printf("Fatorial de 0 é 1");
-        else if (num<0) System.out.printf("Não existe fatorial de número negativo");
+        if (num == 0) System.out.print("Fatorial de 0 é 1");
+        else if (num<0) System.out.print("Não existe fatorial de número negativo");
         else {
             for (int i = 1; i <= num; i++) fat *= i;
             System.out.printf("%d! = %d", num, fat);
@@ -865,14 +864,13 @@ public class Main {
                 y = ((vInicial * Math.sin(rad) * t) - (0.5 * g * Math.pow(t, 2)));
                 System.out.printf("\nPosição %d:", cont);
                 System.out.printf("\n X: %.2f | Y: %.2f", x, y);
-                t+=0.01;
+                t+=0.01F;
             } while (y > 0);
         }
     }
 }
 
 ```
-</details>
 </details>
 </details>
 </details>
@@ -1040,6 +1038,7 @@ public class Main {
         }
     }
 ```
+</details>
 </details>
 </details>
 
