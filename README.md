@@ -492,6 +492,8 @@ public class Main {
 </details>
 
 <details>
+<summary><h3>Estruturas</h3></summary>
+<details>
 <summary><h3>Estruturas de Repetição</h3></summary>
 
 **1) Implementar um programa que imprima a tabuada de um número digitado pelo usuário**
@@ -695,7 +697,7 @@ public class Main {
 </details>
 
 <details>
-<summary><h3>Avaliação - Estruturas </h3></summary>
+<summary><h3>Avaliação </h3></summary>
 <details>
 <summary><h3>Esquenta 🏋️‍♀️🏋️‍♂️🏋</h3></summary>
 **1) O usuário informa seus gastos mensais um por um. O programa soma os valores e para quando um gastonegativo for digitado. Se o total ultrapassar R$5000, o programa exibe um alerta. **
@@ -870,6 +872,7 @@ public class Main {
 }
 
 ```
+</details>
 </details>
 </details>
 
