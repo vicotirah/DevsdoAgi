@@ -15,9 +15,5 @@ public class Main {
         for (int i = 0; i < meses; i++) val[i] = (float) (inv *Math.pow((1+taxa), (i+1)));
 
         System.out.print("Valores Furutos: " + Arrays.toString(val));
-
     }
-
-
-
 }

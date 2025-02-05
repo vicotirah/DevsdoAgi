@@ -1038,6 +1038,161 @@ public class Main {
         }
     }
 ```
+**6) Crie um programa que receba um vetor com os preços diários de um ação durante 10 dias e identifique:**
+**- Quantos dias tiveram alta (preço maior que o do dia anterior)**
+**- Quantos dias tiveram queda(preço menor que o do dia anterior)**
+
+```java
+package com.agibank.s7vetores.s2ex6;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
+        float [] vet = new float[10];
+        int alta = 0, baixa = 0;
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print("\nDia " +(i+1)+ " - Insira o preço: ");
+            vet[i] = sc.nextFloat();
+            if (i>0) {
+                if (vet[i] > vet[i-1]) alta++;
+                else if (vet[i] < vet[i-1]) baixa++;
+                }
+            }
+        System.out.printf("\nAlta: %d | Baixa: %d", alta, baixa);
+    }
+}
+```
+**7) Crie um programa que armazene em um vetor os velores de 5 ações diferentes na carteira de um investidor. 
+Em seguida, o programa deve calcular e exibir:**
+**O total investido somando os valores**
+**O percentual de cada ação na carteira**
+
+```java
+package com.agibank.s7vetores.s2ex7;
+import java.util.Arrays;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
+        float [] acao = new float[5];
+        float [] porcentagem = new float[5];
+        float total = 0;
+
+        for (int i = 0; i < 5; i++) {
+            System.out.print("\nInsira o valor da ação " + (i+1) + ": ");
+            acao[i] = sc.nextFloat();
+            if (acao[i] > 0){
+                total += acao[i];
+            }
+            else if (acao[i] < 0){
+                acao[i] = 0;
+            }
+        }
+
+        for (int i = 0; i < 5; i++) porcentagem[i] = (acao[i]/total)*100;
+
+        System.out.printf("Total = R$ %.2f\n", total);
+        System.out.print("Porcentagem: " + Arrays.toString(porcentagem));
+    }
+}
+```
+**8) Crie um programa que receba um vetor com os preços de compra e de um vetor com os preços de venda de 5 ativos diferentes.
+O programa deve calcular o ganho ou perda de cada ativo e, se o lucro passar de R$20000, calcular o imposto de 15% do lucro excedente.**
+```java
+package com.agibank.s7vetores.s2ex8;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
+        float [] compra = new float[5];
+        float [] venda = new float[5];
+        float lucro = 0, imp = 0.15F, dif=0;
+
+        for (int i = 0; i < 5 ; i++) {
+            System.out.print("\nInsira o valor de compra: ");
+            compra[i] = sc.nextFloat();
+            System.out.print("\nInsira o valor de venda: ");
+            venda[i] = sc.nextFloat();
+            lucro += venda[i]-compra[i];
+        }
+
+        if (lucro>20000) {
+            dif = lucro - 20000;
+            lucro -= (dif*imp);
+            System.out.print("Imposto de 15% aplicado");
+        } else System.out.print("Sem imposto aplicado");
+
+        System.out.printf("\nLucro total: R$%.2f", lucro);
+    }
+}
+```
+**9) Crie um programa que armazene em um vetor os valores futuros de um investimento de R$1000 aplicados em um juros compostos por 6 meses, com taxa de 2% ao mês**
+**Fórmula: valor futuro = valor inicialx(1+taxa)^n**
+
+```java
+package com.agibank.s7vetores.s2ex9;
+import java.util.Arrays;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
+        int meses = 6;
+        float inv = 1000.0F, taxa = 0.02F;
+        float [] val = new float[meses];
+
+        for (int i = 0; i < meses; i++) val[i] = (float) (inv *Math.pow((1+taxa), (i+1)));
+
+        System.out.print("Valores Furutos: " + Arrays.toString(val));
+    }
+}
+```
+
+**10) Crie um programa que receba um valor com os preços de fechamento de uma ação durante 10 dias e calcule o maior drawdown ocorrido no período.
+Drawdown = ((preço atual - pico max anterior)/pico max anterior)x100**
+```java
+package com.agibank.s7vetores.s2ex10;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Locale.setDefault(Locale.US);
+        Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
+        float [] valor = {100, 105, 102, 110, 100, 107, 95, 97, 99, 103};
+        float dDown;
+        float picoMax = valor[0], maiordDown=0 ;
+
+        for (int i = 0; i < valor.length; i++) {
+            if (picoMax < valor[i]) picoMax = valor[i];
+            else {
+                dDown = ((valor[i]-picoMax)/picoMax)*100;
+                if (dDown<maiordDown) maiordDown = dDown;
+            }
+        }
+        System.out.printf("Maior DrawnDown: %.2f%%", maiordDown);
+    }
+}
+```
+
+
 </details>
 </details>
 </details>
