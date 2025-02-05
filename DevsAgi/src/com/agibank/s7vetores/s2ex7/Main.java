@@ -8,18 +8,24 @@ public class Main {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
-        float[] vet = new float[5];
-        float[] perc = new float[5];
+        float [] acao = new float[5];
+        float [] porcentagem = new float[5];
         float total = 0;
 
         for (int i = 0; i < 5; i++) {
-            System.out.print("\nInsira o valor investido na ação" + (i + 1) + ": ");
-            vet[i] = sc.nextFloat();
-            total += vet[i];
+            System.out.print("\nInsira o valor da ação " + (i+1) + ": ");
+            acao[i] = sc.nextFloat();
+            if (acao[i] > 0){
+                total += acao[i];
+            }
+            else if (acao[i] < 0){
+                acao[i] = 0;
+            }
         }
-        for (int i = 0; i<5;i++ ) perc[i] = (vet[i]/total)*100;
 
-        System.out.printf("\nTotal investido: %.2f", total);
-        System.out.print("\nPorcentagem:" + Arrays.toString(perc));
+        for (int i = 0; i < 5; i++) porcentagem[i] = (acao[i]/total)*100;
+
+        System.out.printf("Total = R$ %.2f\n", total);
+        System.out.print("Porcentagem: " + Arrays.toString(porcentagem));
     }
 }
