@@ -5,11 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de5834e9-ff3d-4919-ac82-3df0c4fa2289" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DevsAgi/src/com/agibank/s7vetores/s2ex10/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevsAgi/src/com/agibank/s8matriz/s2ex1/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DevsAgi/src/com/agibank/s8matriz/s2ex2/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DevsAgi/src/com/agibank/s7vetores/s2ex8/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevsAgi/src/com/agibank/s7vetores/s2ex8/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DevsAgi/src/com/agibank/s7vetores/s2ex9/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/DevsAgi/src/com/agibank/s7vetores/s2ex9/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DevsdoAgi/com/agibank/s7vetores/s2ex10/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DevsdoAgi/com/agibank/s7vetores/s2ex10/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DevsdoAgi/com/agibank/s7vetores/s2ex8/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DevsdoAgi/com/agibank/s7vetores/s2ex8/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

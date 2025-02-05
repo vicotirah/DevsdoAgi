@@ -24,8 +24,6 @@ public class Main {
             lucro -= (dif*imp);
             System.out.print("Imposto de 15% aplicado");
         } else System.out.print("Sem imposto aplicado");
-
         System.out.printf("\nLucro total: R$%.2f", lucro);
     }
-
 }
